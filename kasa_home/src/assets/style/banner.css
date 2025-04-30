@@ -1,0 +1,7 @@
+.banner{
+    display: flex;
+    justify-content: space-around;
+}
+.banner img {
+    width: 40%;
+}
