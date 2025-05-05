@@ -1,16 +1,16 @@
 import React from 'react'
-import '../assets/style/banner.css'
+import '../assets/style/header.css'
 import Logo from '../assets/image/logo.png'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 export function Header() {
     return (
         <header>
-            <div className='banner'>
+            <div className='header'>
                 <img src={Logo} />
-                <p>Accueil</p>
-                <Link to="/apropos">A propos</Link>
+                <NavLink to="/">Accueil</NavLink>
+                <NavLink to="/apropos">A propos</NavLink>
             </div>
         </header>
         

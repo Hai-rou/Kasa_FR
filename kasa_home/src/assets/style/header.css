@@ -1,12 +1,12 @@
-.banner{
+.header{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
-.banner img {
+.header img {
     width: 40%;
 }
-.banner a {
+.header a {
     text-decoration: none;
     color: black;
-    margin-top: 14px;
 }

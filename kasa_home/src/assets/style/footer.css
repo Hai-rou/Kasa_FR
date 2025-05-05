@@ -4,7 +4,6 @@ footer{
     justify-content: center;
     align-items: center;
     height: 200px;
-    width: 100%;
 }
 
 .end{
@@ -14,4 +13,5 @@ footer{
     flex-direction: column;
     color: white;
     font-size: 12px;
+    gap: 10px;
 }
