@@ -5,3 +5,8 @@
 .banner img {
     width: 40%;
 }
+.banner a {
+    text-decoration: none;
+    color: black;
+    margin-top: 14px;
+}

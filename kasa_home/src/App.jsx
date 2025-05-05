@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import Banner from './components/banner'
+import React from 'react'
+
+import { Header } from "./components/header.jsx"
+import { Footer } from './components/footer.jsx'
+import { BrowserRouter } from 'react-router-dom';
 
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
   return (
-    <Banner />
-
+    <BrowserRouter>
+      <Header />
+      
+      <Footer />
+    </BrowserRouter>
+    
   )
 }
 

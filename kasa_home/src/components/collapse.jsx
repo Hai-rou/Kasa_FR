@@ -1,0 +1,1 @@
+//chevron de detail dans les articles 
