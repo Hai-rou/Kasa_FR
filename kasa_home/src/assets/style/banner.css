@@ -1,0 +1,32 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.banner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: 80px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.banner .overlay {
+  border-radius: 10px;
+  background: black;
+  width: 80%;
+  height: 80px;
+  position: absolute;
+  opacity: 0.5;
+  color: white;
+}
+.banner .ban_text {
+  width: 52%;
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  font-family: "Montserrat";
+  margin-left: -75px;
+}/*# sourceMappingURL=banner.css.map */

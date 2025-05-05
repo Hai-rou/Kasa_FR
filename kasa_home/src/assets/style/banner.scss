@@ -1,0 +1,31 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    img{
+        object-fit: cover;
+        width: 80%;
+        height: 80px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    .overlay{
+        border-radius: 10px;
+        background: black;
+        width: 80%;
+        height: 80px;
+        position: absolute;
+        opacity: 0.5;
+        color: white;
+    }
+    .ban_text{
+        width: 52%;
+        position: absolute;
+        font-size: 20px;
+        color: white;
+        font-family: "Montserrat";
+        margin-left: -75px;
+    }
+}
