@@ -1,0 +1,26 @@
+.data_gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.card {
+  padding-left: 20px;
+}
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 95%;
+  height: 250px;
+  border-radius: 10px;
+}
+.card .card_subtitle {
+  font-family: "Montserrat";
+  position: absolute;
+  width: 60%;
+  margin-top: -60px;
+  padding-left: 5px;
+  color: white;
+  font-weight: 700;
+}/*# sourceMappingURL=card.css.map */

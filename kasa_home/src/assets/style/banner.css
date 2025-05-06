@@ -8,15 +8,14 @@
 .banner img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 80%;
+  width: 90%;
   height: 80px;
   border-radius: 10px;
-  margin-bottom: 5px;
 }
 .banner .overlay {
   border-radius: 10px;
   background: black;
-  width: 80%;
+  width: 90%;
   height: 80px;
   position: absolute;
   opacity: 0.5;

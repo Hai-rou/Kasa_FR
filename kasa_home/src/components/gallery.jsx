@@ -1,16 +1,24 @@
 import React from 'react'
-import Imgtext from '../assets/image/banner.png'
-import { Link } from 'react-router-dom'
+import data from '../data/data.json'
+import Card from '../components/card.jsx'
+import '../assets/style/card.css'
 
-function gallery(){
+function Gallery(){
     return (
-        <main>
-            <div>
-                <img src={Imgtext}/>
-            </div>
-        </main>
+       <section className='data_gallery'>
+            {data.map(data => {
+                return (
+                    <Card 
+                        key={data.id}
+                        id={data.id}
+                        title={data.title}
+                        cover={data.cover}
+                    />
+                )
+            })}
+       </section>
     )
 }
 
 
-export default gallery
+export default Gallery
