@@ -5,7 +5,7 @@ import '../assets/style/card.css'
 
 function Card({id, title, cover}) {
     return(
-        <Link to={`/logement/${id}`}>
+        <Link to={`/Logement/${id}`}>
             <div className="card">
                 <figure>
                     <img src={cover} alt={title} className="card_img" />
