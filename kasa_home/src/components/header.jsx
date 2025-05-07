@@ -10,7 +10,7 @@ export function Header() {
             <div className='header'>
                 <img src={Logo} />
                 <NavLink to="/">Accueil</NavLink>
-                <NavLink to="/apropos">A propos</NavLink>
+                <NavLink to="/about">A propos</NavLink>
             </div>
         </header>
         

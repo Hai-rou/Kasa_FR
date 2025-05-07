@@ -1,28 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import data from "../data/data.json"; 
-import Logehead from '../components/logehead';
-import MonCarrousel from '../components/carrousel';
-import { useParams } from 'react-router-dom';
+// Logement.jsx
+import React from "react";
+import { useParams } from "react-router-dom";
+import logements from "../data/data.json"; // Chemin vers ton JSON
 
+const Logement = () => {
+  const { id } = useParams();
+  const logement = logements.find((item) => item.id === id);
 
-function Logement() {
+  if (!logement) {
+    return <h2>Logement introuvable</h2>;
+  }
 
-    const [image, setImage] = useState([])
-
-    const idLogement = useParams("id").id
-    const ActLoge = data.filter(data => data.id === idLogement)
-
-    useEffect(() => {
-        const ActLoge = data.filter(data => data.id === idLogement)
-        setImage(ActLoge[0].pictures)
-    }, [idLogement])
-
-    return (
-        <div className='logement_page'>
-            <MonCarrousel pictures={ActLoge[0].pictures} numberPhotos={ActLoge[0].pictures.length} />
-            <Logehead ActLoge={ActLoge[0]}/>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1>{logement.title}</h1>
+      <img src={logement.image} alt={logement.title} style={{ width: "300px" }} />
+      <p>{logement.description}</p>
+    </div>
+  );
+};
 
 export default Logement;

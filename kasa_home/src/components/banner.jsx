@@ -1,17 +1,15 @@
+// Banner.jsx
 import React from 'react';
-import '../assets/style/banner.css'
-import LogoBan from '../assets/image/banner.png'
+import '../assets/style/banner.css';
 
-
-
-function Banner() {
-    return(
+function Banner({ image, text, showOverlay = true }) {
+    return (
         <section className='banner'>
-            <img src={LogoBan} alt='logo bannière'/>
-            <div className='overlay'></div>
-            <h2 className="ban_text">Chez vous, partout et ailleurs</h2>
+            <img src={image} alt='bannière' />
+            {showOverlay && <div className="overlay"></div>}
+            {text && <h2 className="ban_text">{text}</h2>}
         </section>
-    )
+    );
 }
 
-export default Banner
+export default Banner;
