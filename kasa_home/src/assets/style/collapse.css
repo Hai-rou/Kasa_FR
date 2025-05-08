@@ -1,0 +1,50 @@
+.content_about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.content_about .collapse_panel {
+  width: 90%;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.content_about .collapse_panel .collapse__header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #FF6060;
+  align-content: center;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 500;
+  z-index: 10;
+  position: relative;
+}
+.content_about .collapse_panel .collapse__header .fa-chevron-down {
+  color: white;
+  font-size: 22px;
+  z-index: 10;
+  cursor: pointer;
+  width: 50px;
+}
+.content_about .collapse_panel .collapse__header .fa-chevron-up {
+  color: white;
+  font-size: 22px;
+  z-index: 10;
+  cursor: pointer;
+  width: 50px;
+}
+.content_about .collapse_panel .collapse__content {
+  font-family: "Montserrat";
+  z-index: -1;
+  position: relative;
+  font-size: 12px;
+  animation: slide-in 0.8s ease-in-out;
+  background-color: rgba(217, 215, 215, 0.6117647059);
+  border-radius: 5px;
+  padding: 11px;
+}/*# sourceMappingURL=collapse.css.map */

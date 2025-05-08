@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../assets/style/collapse.css'
 
 export function Collapse(props) {
 
@@ -13,10 +14,10 @@ export function Collapse(props) {
 
     return (
           <div className='collapse__panel'>
-                <p className='collapse__header' onClick={showContent} >
+                <div className='collapse__header' onClick={showContent} >
                       <span>{props.title}</span>
                       <i className={chevronClass}></i>
-                </p>
+                </div>
                 {isShow && <p className={contentClass}>{props.content}</p>}
           </div>
     );

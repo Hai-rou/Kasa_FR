@@ -10,7 +10,7 @@ const About = () => {
     return (
         <>
         <div className="Img_about">
-            <Banner image={imgAbout} showOverlay={false} />
+            <Banner image={imgAbout} />
         </div>
         <div className="content_about">
             {aboutData.map(data =>{
