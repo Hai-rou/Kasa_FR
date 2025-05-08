@@ -1,27 +1,31 @@
 import React, { useState } from "react";
+import '../assets/style/carrousel.css'
 
-const MonCarrousel = () => {
-  const [index, setIndex] = useState(0);
-  const Carousel = data.pictures
+const Carousel = ({ pictures }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    setIndex((prev) => (prev === 0 ? Carousel.length - 1 : prev - 1));
+  const next = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
   };
 
-  const nextSlide = () => {
-    setIndex((prev) => (prev === Carousel.length - 1 ? 0 : prev + 1));
+  const prev = () => {
+    setCurrentIndex((prevIndex) => 
+      (prevIndex - 1 + pictures.length) % pictures.length
+    );
   };
+
+  if (!pictures || pictures.length === 0) return null;
 
   return (
-    <div style={{ position: "relative", width: "300px", height: "200px" }}>
+    <div className="carousel">
+      <button onClick={prev} className="btnleft">‹</button>  {/* Chevron gauche */}
+      <button onClick={next} className="btnright">›</button>  {/* Chevron droit */}
       <img
-        src={Carousel[index].src}
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        src={pictures[currentIndex]}
+        alt={`Image ${currentIndex + 1}`}
       />
-      <button onClick={prevSlide} style={{ position: "absolute", left: 0 }}>←</button>
-      <button onClick={nextSlide} style={{ position: "absolute", right: 0 }}>→</button>
     </div>
   );
 };
 
-export default MonCarrousel;
+export default Carousel;

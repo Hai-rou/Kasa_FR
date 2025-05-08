@@ -1,7 +1,10 @@
 // Logement.jsx
 import React from "react";
 import { useParams } from "react-router-dom";
-import logements from "../data/data.json"; // Chemin vers ton JSON
+import logements from "../data/data.json"; 
+import Carousel from "../components/carrousel";
+
+
 
 const Logement = () => {
   const { id } = useParams();
@@ -13,9 +16,9 @@ const Logement = () => {
 
   return (
     <div>
-      <h1>{logement.title}</h1>
-      <img src={logement.image} alt={logement.title} style={{ width: "300px" }} />
-      <p>{logement.description}</p>
+      <Carousel pictures={logement.pictures} />
+      <h1 className="loge_title">{logement.title}</h1>
+      <p>{logement.location}</p>
     </div>
   );
 };

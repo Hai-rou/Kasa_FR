@@ -1,0 +1,31 @@
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.carousel img {
+  width: 90%;
+  height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.carousel .btnleft {
+  position: absolute;
+  margin-left: -80%;
+  margin-top: 24%;
+  color: white;
+  font-size: 40px;
+  border: none;
+  background: transparent;
+}
+.carousel .btnright {
+  position: absolute;
+  margin-left: 80%;
+  margin-top: 24%;
+  color: white;
+  font-size: 40px;
+  border: none;
+  background: transparent;
+}/*# sourceMappingURL=carrousel.css.map */
