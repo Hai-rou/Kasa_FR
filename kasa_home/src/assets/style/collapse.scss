@@ -1,9 +1,12 @@
-.content_about{
+.content{
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 20px;
     .collapse_panel{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         width: 90%;
         margin-left: 20px;
         cursor: pointer;
@@ -45,6 +48,11 @@
             background-color: #d9d7d79c;
             border-radius: 5px;
             padding: 11px;
+            ul{
+                list-style: none;       
+                padding-left: 0;        
+                margin: 0;
+            }
         }
     }
 }

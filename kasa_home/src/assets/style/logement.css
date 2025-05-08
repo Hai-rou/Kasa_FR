@@ -1,0 +1,62 @@
+.loge_home {
+  display: flex;
+  flex-direction: column;
+}
+.loge_home .loge_content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 19px;
+  gap: 5px;
+}
+.loge_home .loge_content .loge_title {
+  font-family: "Montserrat";
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 19px;
+}
+.loge_home .loge_content .loge_p {
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+.loge_home .item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 19px;
+}
+.loge_home .item .loge_items {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: white;
+  width: 80px;
+  height: 15px;
+  background-color: #FF6060;
+  text-align: center;
+  font-size: 10px;
+  align-items: center;
+}
+.loge_home .rating {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 19px;
+  margin-bottom: 20px;
+}
+.loge_home .rating .loge_name {
+  font-family: "Montserrat";
+  color: #FF6060;
+  width: 10px;
+  text-align: end;
+  flex-basis: min-content;
+  margin-right: -26%;
+}
+.loge_home .rating img {
+  width: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50px;
+  margin-top: -1%;
+  margin-right: 6%;
+}/*# sourceMappingURL=logement.css.map */

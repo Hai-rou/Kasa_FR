@@ -12,7 +12,7 @@ const About = () => {
         <div className="Img_about">
             <Banner image={imgAbout} />
         </div>
-        <div className="content_about">
+        <div className="content">
             {aboutData.map(data =>{
                 return(
                     <div key={data.id} className="collapse_panel">
