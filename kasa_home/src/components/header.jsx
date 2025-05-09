@@ -9,8 +9,10 @@ export function Header() {
         <header>
             <div className='header'>
                 <img src={Logo} />
-                <NavLink to="/">Accueil</NavLink>
-                <NavLink to="/about">A propos</NavLink>
+                <div className='navbar'>
+                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/about">A propos</NavLink>
+                </div>
             </div>
         </header>
         

@@ -7,16 +7,16 @@
     img{
         object-fit: cover;
         width: 90%;
-        height: 80px;
+        height: 110px;
         border-radius: 10px;
     }
     .overlay{
         border-radius: 10px;
         background: black;
         width: 90%;
-        height: 80px;
+        height: 110px;
         position: absolute;
-        opacity: 0.5;
+        opacity: 0.6;
         color: white;
     }
     .ban_text{
@@ -27,4 +27,8 @@
         font-family: "Montserrat";
         margin-left: -75px;
     }
+}
+
+@media (min-width: 768px){
+
 }

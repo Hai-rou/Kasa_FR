@@ -1,19 +1,26 @@
-// Logement.jsx
-import React from "react";
-import { useParams } from "react-router-dom";
-import logements from "../data/data.json"; 
-import Carousel from "../components/carrousel";
-import Rating from "../components/rating";
+import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import logements from '../data/data.json';
+import Carousel from '../components/carrousel.jsx';
+import Rating from '../components/Rating';
+import {Collapse} from '../components/Collapse';
 import '../assets/style/logement.css'
-import { Collapse } from "../components/collapse";
-
 
 const Logement = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const logement = logements.find((item) => item.id === id);
 
+  // Redirection vers /error si aucun logement trouvé
+  useEffect(() => {
+    if (!logement) {
+      navigate('/Error');
+    }
+  }, [logement, navigate]);
+
+  // Évite d'afficher quoi que ce soit avant la redirection
   if (!logement) {
-    return <h2>Logement introuvable</h2>;
+    return null;
   }
 
   return (
@@ -30,8 +37,10 @@ const Logement = () => {
       </div>
       <div className="rating">
         <Rating rating={logement.rating} />
-        <span className="loge_name">{logement.host.name}</span>
-        <img src={logement.host.picture} />
+        <div className="name">
+          <span className="loge_name">{logement.host.name}</span>
+          <img src={logement.host.picture} alt="host" />
+        </div>
       </div>
       <div className="content">
         <div className="collapse_panel">

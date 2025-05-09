@@ -9,16 +9,16 @@
   -o-object-fit: cover;
      object-fit: cover;
   width: 90%;
-  height: 80px;
+  height: 110px;
   border-radius: 10px;
 }
 .banner .overlay {
   border-radius: 10px;
   background: black;
   width: 90%;
-  height: 80px;
+  height: 110px;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.6;
   color: white;
 }
 .banner .ban_text {

@@ -42,21 +42,62 @@
         justify-content: space-between;
         margin-left: 19px;
         margin-bottom: 20px;
-        .loge_name{
-            font-family: "Montserrat";
-            color: #FF6060;
-            width: 10px;
-            text-align: end;
-            flex-basis: min-content;
-            margin-right: -26%;
+        .name{
+            display: flex;
+            justify-content: space-between;
+            width: 37%;
+            .loge_name{
+                font-family: "Montserrat";
+                color: #FF6060;
+                width: 10px;
+                text-align: end;
+                flex-basis: min-content;
+            }
+            img{
+                width: 48px;
+                object-fit: cover;
+                border-radius: 50px;
+                margin-top: -1%;
+                margin-right: 6%;
+            }
         }
-        img{
-            width: 48px;
-            object-fit: cover;
-            border-radius: 50px;
-            margin-top: -1%;
-            margin-right: 6%;
-        }
+
     }
 
+}
+
+
+@media (min-width: 768px){
+    .loge_home{
+        .loge_content{
+            padding-left: 40px;
+        }
+        .item{
+            padding-left: 20px;
+        }
+        .rating{
+            position: absolute;
+            flex-direction: column-reverse;
+            width: 25%;
+            margin-left: 70%;
+            margin-top: 38%;
+            align-items: flex-end;
+            gap: 11px;
+            .star{
+                display: flex;
+                gap: 10px;
+            }
+            .name{
+                display: flex;
+                justify-content: space-between;
+                width: 70%;
+                img{
+                }
+                .loge_name{
+                    font-size: 15px;
+                }
+            }
+        }
+        
+    }
 }

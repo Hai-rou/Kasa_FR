@@ -44,19 +44,53 @@
   margin-left: 19px;
   margin-bottom: 20px;
 }
-.loge_home .rating .loge_name {
+.loge_home .rating .name {
+  display: flex;
+  justify-content: space-between;
+  width: 37%;
+}
+.loge_home .rating .name .loge_name {
   font-family: "Montserrat";
   color: #FF6060;
   width: 10px;
   text-align: end;
   flex-basis: min-content;
-  margin-right: -26%;
 }
-.loge_home .rating img {
+.loge_home .rating .name img {
   width: 48px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50px;
   margin-top: -1%;
   margin-right: 6%;
+}
+
+@media (min-width: 768px) {
+  .loge_home .loge_content {
+    padding-left: 40px;
+  }
+  .loge_home .item {
+    padding-left: 20px;
+  }
+  .loge_home .rating {
+    position: absolute;
+    flex-direction: column-reverse;
+    width: 25%;
+    margin-left: 70%;
+    margin-top: 38%;
+    align-items: flex-end;
+    gap: 11px;
+  }
+  .loge_home .rating .star {
+    display: flex;
+    gap: 10px;
+  }
+  .loge_home .rating .name {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .loge_home .rating .name .loge_name {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=logement.css.map */
