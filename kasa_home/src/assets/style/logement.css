@@ -62,22 +62,28 @@
      object-fit: cover;
   border-radius: 50px;
   margin-top: -1%;
-  margin-right: 6%;
+  margin-right: 17%;
 }
 
 @media (min-width: 768px) {
   .loge_home .loge_content {
-    padding-left: 40px;
+    padding-left: 50px;
+  }
+  .loge_home .loge_content .loge_title {
+    font-size: 24px;
+  }
+  .loge_home .loge_content .loge_p {
+    font-size: 15px;
   }
   .loge_home .item {
-    padding-left: 20px;
+    padding-left: 33px;
   }
   .loge_home .rating {
     position: absolute;
     flex-direction: column-reverse;
     width: 25%;
     margin-left: 70%;
-    margin-top: 38%;
+    margin-top: 43%;
     align-items: flex-end;
     gap: 11px;
   }
@@ -88,7 +94,10 @@
   .loge_home .rating .name {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 50%;
+  }
+  .loge_home .rating .name img {
+    margin-right: 2%;
   }
   .loge_home .rating .name .loge_name {
     font-size: 15px;

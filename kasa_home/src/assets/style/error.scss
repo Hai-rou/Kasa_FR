@@ -31,3 +31,17 @@ main{
     }
     
 }
+
+@media (min-width: 768px){
+    main{
+        .error{
+            h1{
+                font-size: 190px;
+            }
+            p{
+                width: 100%;
+                font-size: 25px;
+            }
+        }
+    }
+}

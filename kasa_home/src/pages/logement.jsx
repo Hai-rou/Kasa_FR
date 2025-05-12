@@ -42,7 +42,7 @@ const Logement = () => {
           <img src={logement.host.picture} alt="host" />
         </div>
       </div>
-      <div className="content">
+      <div className="content content--variantB">
         <div className="collapse_panel">
           <Collapse title="Description" content={logement.description} />
           <Collapse title="Equipements" content={logement.equipments} />

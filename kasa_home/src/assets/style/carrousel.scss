@@ -28,3 +28,21 @@
         background: transparent;
     }
 }
+
+@media (min-width: 768px){
+    .carousel{
+        img{
+            height: 400px;
+        }
+        .btnleft{
+            margin-top: 14%;
+            margin-left: -85%;
+            font-size: 75px;
+        }
+        .btnright{
+            margin-top: 14%;
+            margin-left: 85%;
+            font-size: 75px;
+        }
+    }
+}

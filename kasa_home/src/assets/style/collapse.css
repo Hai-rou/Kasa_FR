@@ -9,16 +9,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 90%;
-  margin-left: 20px;
   cursor: pointer;
 }
 .content .collapse_panel .collapse__header {
   display: flex;
   justify-content: space-between;
+  background-color: #FF6060;
   border-radius: 5px;
   height: 30px;
-  background-color: #FF6060;
   align-content: center;
   padding-left: 10px;
   flex-wrap: wrap;
@@ -28,13 +26,7 @@
   z-index: 10;
   position: relative;
 }
-.content .collapse_panel .collapse__header .fa-chevron-down {
-  color: white;
-  font-size: 22px;
-  z-index: 10;
-  cursor: pointer;
-  width: 50px;
-}
+.content .collapse_panel .collapse__header .fa-chevron-down,
 .content .collapse_panel .collapse__header .fa-chevron-up {
   color: white;
   font-size: 22px;
@@ -57,18 +49,50 @@
   padding-left: 0;
   margin: 0;
 }
+.content.content--variantA {
+  align-items: flex-start;
+}
+.content.content--variantA .collapse_panel {
+  width: 90%;
+  margin-left: 20px;
+}
+.content.content--variantA .collapse_panel .collapse__content {
+  background-color: rgba(217, 215, 215, 0.6117647059);
+}
+.content.content--variantB {
+  align-items: center;
+}
+.content.content--variantB .collapse_panel {
+  width: 91%;
+  margin-left: 0;
+}
+.content.content--variantB .collapse_panel .collapse__content {
+  background-color: #e0f0ff;
+}
 
 @media (min-width: 768px) {
-  .content {
-    align-items: center;
+  .content.content--variantA {
     padding-left: 8%;
+    align-items: flex-start;
   }
-  .content .collapse_panel {
+  .content.content--variantA .collapse_panel {
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 0;
   }
-  .content .collapse_panel .collapse__panel {
+  .content.content--variantA .collapse_panel .collapse__panel {
     width: 90%;
+  }
+  .content.content--variantB {
+    margin-top: 10px;
+  }
+  .content.content--variantB .collapse_panel {
+    width: 91%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 64px;
+    margin-left: 6px;
+  }
+  .content.content--variantB .collapse_panel .collapse__panel {
+    width: 100%;
   }
 }/*# sourceMappingURL=collapse.css.map */

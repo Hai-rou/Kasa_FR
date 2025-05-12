@@ -4,28 +4,70 @@
   align-items: center;
   margin-top: 30px;
   margin-bottom: 10px;
+  position: relative;
 }
 .banner img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 90%;
-  height: 110px;
   border-radius: 10px;
 }
 .banner .overlay {
   border-radius: 10px;
   background: black;
   width: 90%;
-  height: 110px;
   position: absolute;
-  opacity: 0.6;
   color: white;
 }
 .banner .ban_text {
-  width: 52%;
   position: absolute;
-  font-size: 20px;
-  color: white;
   font-family: "Montserrat";
+  color: white;
+}
+.banner.banner--variantA img {
+  height: 110px;
+}
+.banner.banner--variantA .overlay {
+  height: 110px;
+  opacity: 0.3;
+}
+.banner.banner--variantA .ban_text {
+  width: 52%;
+  font-size: 20px;
   margin-left: -75px;
+}
+.banner.banner--variantB img {
+  height: 130px;
+}
+.banner.banner--variantB .overlay {
+  height: 130px;
+  opacity: 0.5;
+}
+.banner.banner--variantB .ban_text {
+  width: 60%;
+  font-size: 24px;
+  margin-left: -40px;
+}
+
+@media (min-width: 768px) {
+  .banner.banner--variantA img {
+    height: 200px;
+  }
+  .banner.banner--variantA .overlay {
+    height: 200px;
+  }
+  .banner.banner--variantA .ban_text {
+    font-size: 26px;
+    margin-left: -90px;
+  }
+  .banner.banner--variantB img {
+    height: 160px;
+  }
+  .banner.banner--variantB .overlay {
+    height: 160px;
+  }
+  .banner.banner--variantB .ban_text {
+    font-size: 30px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=banner.css.map */

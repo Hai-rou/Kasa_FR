@@ -58,7 +58,7 @@
                 object-fit: cover;
                 border-radius: 50px;
                 margin-top: -1%;
-                margin-right: 6%;
+                margin-right: 17%;
             }
         }
 
@@ -70,17 +70,24 @@
 @media (min-width: 768px){
     .loge_home{
         .loge_content{
-            padding-left: 40px;
+            padding-left: 50px;
+            .loge_title{
+                font-size: 24px;
+            }
+            .loge_p{
+                font-size: 15px;
+            }
+
         }
         .item{
-            padding-left: 20px;
+            padding-left: 33px;
         }
         .rating{
             position: absolute;
             flex-direction: column-reverse;
             width: 25%;
             margin-left: 70%;
-            margin-top: 38%;
+            margin-top: 43%;
             align-items: flex-end;
             gap: 11px;
             .star{
@@ -90,14 +97,14 @@
             .name{
                 display: flex;
                 justify-content: space-between;
-                width: 70%;
+                width: 50%;
                 img{
+                    margin-right: 2%;
                 }
                 .loge_name{
                     font-size: 15px;
                 }
             }
         }
-        
     }
 }

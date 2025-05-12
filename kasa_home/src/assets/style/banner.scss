@@ -1,34 +1,101 @@
-.banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    img{
-        object-fit: cover;
-        width: 90%;
-        height: 110px;
-        border-radius: 10px;
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .overlay {
+    border-radius: 10px;
+    background: black;
+    width: 90%;
+    position: absolute;
+    color: white;
+  }
+
+  .ban_text {
+    position: absolute;
+    font-family: "Montserrat";
+    color: white;
+  }
+
+  // --------------------
+  // Variante A - mobile
+  &.banner--variantA {
+    img {
+      height: 110px;
     }
-    .overlay{
-        border-radius: 10px;
-        background: black;
-        width: 90%;
-        height: 110px;
-        position: absolute;
-        opacity: 0.6;
-        color: white;
+
+    .overlay {
+      height: 110px;
+      opacity: 0.3;
     }
-    .ban_text{
-        width: 52%;
-        position: absolute;
-        font-size: 20px;
-        color: white;
-        font-family: "Montserrat";
-        margin-left: -75px;
+
+    .ban_text {
+      width: 52%;
+      font-size: 20px;
+      margin-left: -75px;
     }
+  }
+
+  // --------------------
+  // Variante B - mobile
+  &.banner--variantB {
+    img {
+      height: 130px;
+    }
+
+    .overlay {
+      height: 130px;
+      opacity: 0.5;
+    }
+
+    .ban_text {
+      width: 60%;
+      font-size: 24px;
+      margin-left: -40px;
+    }
+  }
 }
 
-@media (min-width: 768px){
+// --------------------
+// Responsive desktop styles (appliqués à chaque variante)
+@media (min-width: 768px) {
+  .banner.banner--variantA {
+    img {
+      height: 200px;
+    }
 
+    .overlay {
+      height: 200px;
+
+    }
+
+    .ban_text {
+      font-size: 26px;
+      margin-left: -90px;
+    }
+  }
+
+  .banner.banner--variantB {
+    img {
+      height: 160px;
+    }
+
+    .overlay {
+      height: 160px;
+    }
+
+    .ban_text {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
 }
