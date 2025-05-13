@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 2em;
   position: relative;
 
   img {
@@ -23,12 +22,14 @@
   .ban_text {
     position: absolute;
     font-family: "Montserrat";
+    font-weight: 600;
     color: white;
   }
 
   // --------------------
   // Variante A - mobile
   &.banner--variantA {
+    margin-top: 1em;
     img {
       height: 110px;
     }
@@ -49,25 +50,25 @@
   // Variante B - mobile
   &.banner--variantB {
     img {
-      height: 130px;
+      height: 15vh;
     }
 
     .overlay {
-      height: 130px;
+      height: 15vh;
       opacity: 0.5;
     }
 
     .ban_text {
       width: 60%;
-      font-size: 24px;
-      margin-left: -40px;
+      font-size: 1.5rem;
+      margin-left: -2.5em;
     }
   }
 }
 
 // --------------------
 // Responsive desktop styles (appliqués à chaque variante)
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1025px){
   .banner.banner--variantA {
     img {
       height: 200px;
@@ -96,6 +97,7 @@
     .ban_text {
       font-size: 30px;
       text-align: center;
+      margin-left: 0;
     }
   }
 }

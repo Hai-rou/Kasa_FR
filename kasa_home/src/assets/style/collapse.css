@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 .content .collapse_panel {
   display: flex;
@@ -16,7 +16,7 @@
   justify-content: space-between;
   background-color: #FF6060;
   border-radius: 5px;
-  height: 30px;
+  height: 5vh;
   align-content: center;
   padding-left: 10px;
   flex-wrap: wrap;
@@ -53,14 +53,18 @@
   align-items: flex-start;
 }
 .content.content--variantA .collapse_panel {
-  width: 90%;
+  width: 89%;
   margin-left: 20px;
+}
+.content.content--variantA .collapse_panel .collapse__header {
+  height: 3vh;
 }
 .content.content--variantA .collapse_panel .collapse__content {
   background-color: rgba(217, 215, 215, 0.6117647059);
 }
 .content.content--variantB {
   align-items: center;
+  margin-top: -0.7em;
 }
 .content.content--variantB .collapse_panel {
   width: 91%;
@@ -70,9 +74,10 @@
   background-color: rgba(217, 215, 215, 0.6117647059);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1025px) {
   .content.content--variantA {
-    padding-left: 8%;
+    padding-left: 9%;
+    width: 93%;
     align-items: flex-start;
   }
   .content.content--variantA .collapse_panel {
@@ -94,5 +99,8 @@
   }
   .content.content--variantB .collapse_panel .collapse__panel {
     width: 100%;
+  }
+  .content.content--variantB .collapse_panel .collapse__panel .collapse__header {
+    height: 3vh;
   }
 }/*# sourceMappingURL=collapse.css.map */
