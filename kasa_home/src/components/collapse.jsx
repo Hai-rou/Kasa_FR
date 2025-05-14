@@ -1,8 +1,5 @@
-import { useState, useRef} from "react";
-import '../assets/style/collapse.css'
-
-
-
+import { useState, useRef } from "react";
+import '../assets/style/collapse.css';
 
 export function Collapse(props) {
   const [isShow, setIsShow] = useState(false);
@@ -10,21 +7,20 @@ export function Collapse(props) {
 
   const toggleShow = () => setIsShow(!isShow);
 
-  const chevronClass = (isShow ? "fa-chevron-up" : "fa-chevron-down") + " fas";
+  const chevronClass = isShow ? "fa-chevron-up" : "fa-chevron-down";
 
   return (
     <div className="collapse__panel">
       <div className="collapse__header" onClick={toggleShow}>
         <span>{props.title}</span>
-        <i className={chevronClass}></i>
+        <i className={`fas ${chevronClass}`}></i>
       </div>
       <div
         ref={contentRef}
-        className="collapse__content-wrapper"
+        className={`collapse__content-wrapper ${isShow ? 'open' : ''}`}
         style={{
           maxHeight: isShow ? `${contentRef.current?.scrollHeight}px` : "0px",
           overflow: "hidden",
-          transition: "max-height 0.3s ease",
         }}
       >
         <div className="collapse__content">

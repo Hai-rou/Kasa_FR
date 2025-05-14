@@ -15,7 +15,7 @@
     .collapse__header {
       display: flex;
       justify-content: space-between;
-      background-color: #FF6060; // rouge
+      background-color: #FF6060; /* rouge */
       border-radius: 5px;
       height: 5vh;
       align-content: center;
@@ -37,34 +37,47 @@
       }
     }
 
-    .collapse__content {
-      font-family: "Montserrat";
-      z-index: -1;
-      position: relative;
-      font-size: 12px;
-      animation: slide-in 0.8s ease-in-out;
-      background-color: #d9d7d79c;
-      border-radius: 5px;
-      padding: 11px;
+    .collapse__content-wrapper {
+      max-height: 0; /* L'élément commence replié */
+      opacity: 0;
+      transform: translateX(-100px); /* Déplacé au-dessus de sa position */
+      transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.5s ease; /* Transition fluide */
 
-      ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
+      &.open {
+        max-height: 100px; /* Ou une hauteur suffisante pour ton contenu */
+        opacity: 1;
+        transform: translateX(0); /* Revient à sa position d'origine */
+      }
+
+      .collapse__content {
+        font-family: "Montserrat";
+        font-size: 12px;
+        background-color: #d9d7d79c;
+        border-radius: 5px;
+        padding: 11px;
+        
+        ul {
+          list-style: none;
+          padding-left: 0;
+          margin: 0;
+        }
       }
     }
   }
 
+
+
   // --------------------
   // Variante A
   &.content--variantA {
+    max-width: 1440px;
+    padding-left: 5%;
+    padding-right: 5%;
     align-items: flex-start;
 
     .collapse_panel {
-      width: 89%;
-      margin-left: 20px;
       .collapse__header{
-        height: 3vh;
+        height: 4vh;
       }
       .collapse__content {
         background-color: #d9d7d79c; // gris clair
@@ -77,10 +90,10 @@
   // Variante B
   &.content--variantB {
     align-items: center;
-    margin-top: -0.7em;
+    margin-top: 10px;
 
     .collapse_panel {
-      width: 91%;
+      width: 100%;
       margin-left: 0;
 
       .collapse__content {
@@ -93,35 +106,33 @@
 
 
 // ✅ Responsive bien généré (à l’extérieur des variantes)
-@media (min-width: 768px) and (max-width: 1025px){
-  .content.content--variantA {
-    padding-left: 9%;
-    width: 93%;
-    align-items: flex-start;
-
-    .collapse_panel {
-      flex-direction: row;
-      justify-content: space-between;
-
-      .collapse__panel {
+/*** Tablette : à partir de 768px **/
+@media (min-width: 768px){
+  .content{
+    &.content--variantB {
+      margin-top: -5px;
+      .collapse_panel{
+        flex-direction: row;
+        .collapse__panel{
+          width: 50%;
+        }
+      }
+  }
+   &.content--variantA {
+    .collapse_panel{
+      align-items: center;
+      .collapse__panel{
         width: 90%;
       }
     }
+
+   }
+
   }
-  .content.content--variantB {
-    margin-top: 10px;
-    .collapse_panel {
-        width: 91%;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 64px;
-        margin-left: 6px;
-      .collapse__panel {
-        width: 100%;
-        .collapse__header{
-          height: 3vh;
-        }
-      }
-    }
-  }
+  
+}
+
+/* Desktop : à partir de 1024px */
+@media (min-width: 1024px) {
+
 }

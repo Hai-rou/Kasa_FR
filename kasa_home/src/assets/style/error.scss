@@ -32,16 +32,26 @@ main{
     
 }
 
-@media (min-width: 768px) and (max-width: 1025px){
-    main{
+/*** Tablette : à partir de 768px **/
+@media (min-width: 768px){
+      main{
         .error{
             h1{
                 font-size: 190px;
             }
             p{
                 width: 100%;
-                font-size: 25px;
+                font-size: 20px;
             }
         }
+        a{
+            font-size: 12px;
+        }
     }
+
+}
+
+/* Desktop : à partir de 1024px */
+@media (min-width: 1024px) {
+
 }

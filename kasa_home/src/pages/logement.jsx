@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import logements from '../data/data.json';
 import Carousel from '../components/carrousel.jsx';
 import Rating from '../components/Rating';
-import {Collapse} from '../components/Collapse';
+import {Collapse} from '../components/Collapse.jsx';
 import '../assets/style/logement.css'
 
 const Logement = () => {
@@ -29,11 +29,13 @@ const Logement = () => {
       <div className="loge_content">
         <h1 className="loge_title">{logement.title}</h1>
         <p className="loge_p">{logement.location}</p>
-      </div>
-      <div className="item">
-        <div className="loge_items">Cozy</div>
-        <div className="loge_items">Canal</div>
-        <div className="loge_items">Paris 10</div>
+        <div className="item">
+          {logement.tags.map((tag, index) => (
+            <div key={index} className="tag-item">
+              {tag}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="rating">
         <Rating rating={logement.rating} />

@@ -1,64 +1,69 @@
+/*Mobile first (par défaut)*/
+
 .loge_home{
     display: flex;
     flex-direction: column;
+    max-width: 1440px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
     .loge_content{
         display: flex;
         flex-direction: column;
-        padding-left: 19px;
-        gap: 5px;
+        gap: 10px;
+        margin-bottom: 15px;
         .loge_title{
             font-family: "Montserrat";
             color: #FF6060;
             font-weight: 500;
             font-size: 19px;
+            margin-top: 10px;
         }
         .loge_p{
             font-family: "Montserrat";
             font-weight: 500;
+            font-size: 12px;
         }
-    }
-    .item{
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        margin-left: 19px;
-        .loge_items{
+        .item{
             display: flex;
-            justify-content: center;
-            border-radius: 5px;
-            font-family: "Montserrat";
-            color: white;
-            width: 80px;
-            height: 15px;
-            background-color: #FF6060;
-            text-align: center;
-            font-size: 10px;
-            align-items: center;
+            gap: 10px;
+
+            .tag-item{
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+                font-family: "Montserrat";
+                color: white;
+                width: 90px;
+                height: 20px;
+                background-color: #FF6060;
+                text-align: center;
+                font-size: 8px;
+                font-weight: 500;
+                align-items: center;
+            }
         }
     }
+    
     .rating{
         display: flex;
         justify-content: space-between;
-        margin-left: 19px;
         margin-bottom: 20px;
         .name{
             display: flex;
             justify-content: space-between;
-            width: 37%;
-            margin-right: 20px;
+            width: 100px;
             .loge_name{
                 font-family: "Montserrat";
                 color: #FF6060;
-                width: 10px;
+                font-size: 15px;
                 text-align: end;
                 flex-basis: min-content;
             }
             img{
-                width: 48px;
+                width: 30px;
                 object-fit: cover;
                 border-radius: 50px;
-                margin-top: -1%;
             }
         }
 
@@ -66,45 +71,38 @@
 
 }
 
-
-@media (min-width: 768px) and (max-width: 1025px){
+/*** Tablette : à partir de 768px **/
+@media (min-width: 768px){
     .loge_home{
         .loge_content{
-            padding-left: 3em;
             .loge_title{
-                font-size: 1.7rem;
+                margin-bottom: -7px;
             }
-            .loge_p{
-                font-size: 1rem;
+            .item{
+                margin-top: 8px;
+                .tag-item{
+                    border-radius: 10px;
+                }
             }
-
-        }
-        .item{
-            padding-left: 2em;
         }
         .rating{
-            position: absolute;
             flex-direction: column-reverse;
-            width: 25%;
-            margin-left: 45em;
-            margin-top: 27.5em;
-            align-items: flex-end;
-            gap: 11px;
-            .star{
-                display: flex;
-                gap: 10px;
-            }
+            align-items: end;
+            margin-top: -95px;
+            gap: 20px;
             .name{
-                display: flex;
-                justify-content: space-between;
-                width: 50%;
-                img{
-                    margin-right: 0.1em;
-                }
+                width: 80px;
+                gap: 5px;
                 .loge_name{
-                    font-size: 1rem;
+                    font-size: 12px;
+
                 }
             }
         }
     }
+}
+
+/* Desktop : à partir de 1024px */
+@media (min-width: 1024px) {
+
 }

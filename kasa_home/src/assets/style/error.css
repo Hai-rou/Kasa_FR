@@ -1,3 +1,4 @@
+@charset "UTF-8";
 main {
   display: flex;
   flex-direction: column;
@@ -31,12 +32,17 @@ main a {
   color: black;
 }
 
-@media (min-width: 768px) and (max-width: 1025px) {
+/*** Tablette : à partir de 768px **/
+@media (min-width: 768px) {
   main .error h1 {
     font-size: 190px;
   }
   main .error p {
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
   }
-}/*# sourceMappingURL=error.css.map */
+  main a {
+    font-size: 12px;
+  }
+}
+/* Desktop : à partir de 1024px *//*# sourceMappingURL=error.css.map */

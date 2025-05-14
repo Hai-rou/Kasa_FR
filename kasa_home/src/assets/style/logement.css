@@ -1,105 +1,96 @@
+@charset "UTF-8";
+/*Mobile first (par défaut)*/
 .loge_home {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 20px;
 }
 .loge_home .loge_content {
   display: flex;
   flex-direction: column;
-  padding-left: 19px;
-  gap: 5px;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 .loge_home .loge_content .loge_title {
   font-family: "Montserrat";
   color: #FF6060;
   font-weight: 500;
   font-size: 19px;
+  margin-top: 10px;
 }
 .loge_home .loge_content .loge_p {
   font-family: "Montserrat";
   font-weight: 500;
+  font-size: 12px;
 }
-.loge_home .item {
+.loge_home .loge_content .item {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 19px;
 }
-.loge_home .item .loge_items {
+.loge_home .loge_content .item .tag-item {
   display: flex;
   justify-content: center;
   border-radius: 5px;
   font-family: "Montserrat";
   color: white;
-  width: 80px;
-  height: 15px;
+  width: 90px;
+  height: 20px;
   background-color: #FF6060;
   text-align: center;
-  font-size: 10px;
+  font-size: 8px;
+  font-weight: 500;
   align-items: center;
 }
 .loge_home .rating {
   display: flex;
   justify-content: space-between;
-  margin-left: 19px;
   margin-bottom: 20px;
 }
 .loge_home .rating .name {
   display: flex;
   justify-content: space-between;
-  width: 37%;
-  margin-right: 20px;
+  width: 100px;
 }
 .loge_home .rating .name .loge_name {
   font-family: "Montserrat";
   color: #FF6060;
-  width: 10px;
+  font-size: 15px;
   text-align: end;
   flex-basis: min-content;
 }
 .loge_home .rating .name img {
-  width: 48px;
+  width: 30px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50px;
-  margin-top: -1%;
 }
 
-@media (min-width: 768px) and (max-width: 1025px) {
-  .loge_home .loge_content {
-    padding-left: 3em;
-  }
+/*** Tablette : à partir de 768px **/
+@media (min-width: 768px) {
   .loge_home .loge_content .loge_title {
-    font-size: 1.7rem;
+    margin-bottom: -7px;
   }
-  .loge_home .loge_content .loge_p {
-    font-size: 1rem;
+  .loge_home .loge_content .item {
+    margin-top: 8px;
   }
-  .loge_home .item {
-    padding-left: 2em;
+  .loge_home .loge_content .item .tag-item {
+    border-radius: 10px;
   }
   .loge_home .rating {
-    position: absolute;
     flex-direction: column-reverse;
-    width: 25%;
-    margin-left: 45em;
-    margin-top: 27.5em;
-    align-items: flex-end;
-    gap: 11px;
-  }
-  .loge_home .rating .star {
-    display: flex;
-    gap: 10px;
+    align-items: end;
+    margin-top: -95px;
+    gap: 20px;
   }
   .loge_home .rating .name {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-  }
-  .loge_home .rating .name img {
-    margin-right: 0.1em;
+    width: 80px;
+    gap: 5px;
   }
   .loge_home .rating .name .loge_name {
-    font-size: 1rem;
+    font-size: 12px;
   }
-}/*# sourceMappingURL=logement.css.map */
+}
+/* Desktop : à partir de 1024px *//*# sourceMappingURL=logement.css.map */

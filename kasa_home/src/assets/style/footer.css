@@ -1,3 +1,4 @@
+@charset "UTF-8";
 footer {
   background-color: black;
   display: flex;
@@ -16,20 +17,24 @@ footer .end {
   gap: 10px;
 }
 footer .txt_footer {
+  width: 90px;
   font-family: "Montserrat";
   text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 1025px) {
+/*** Tablette : à partir de 768px **/
+@media (min-width: 768px) {
   footer {
-    height: 10vh;
+    height: 100px;
   }
   footer .end {
     margin-top: 2em;
     justify-content: space-between;
-    height: 5vh;
+    height: 50px;
+    gap: 20px;
   }
   footer img {
     width: 20%;
   }
-}/*# sourceMappingURL=footer.css.map */
+}
+/* Desktop : à partir de 1024px *//*# sourceMappingURL=footer.css.map */

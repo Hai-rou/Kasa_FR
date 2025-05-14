@@ -1,6 +1,6 @@
 import React from "react";
 import imgAbout from '../assets/image/aboutiamge.jpg'
-import { Collapse } from '../components/collapse';
+import { Collapse } from '../components/Collapse';
 import aboutData from '../data/aboutdata.json'
 import Banner from "../components/banner";
 

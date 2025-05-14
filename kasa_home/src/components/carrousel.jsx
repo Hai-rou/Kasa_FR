@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../assets/style/carrousel.css'
+import '../assets/style/carrousel.css';
 
 const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,7 +9,7 @@ const Carousel = ({ pictures }) => {
   };
 
   const prev = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       (prevIndex - 1 + pictures.length) % pictures.length
     );
   };
@@ -18,12 +18,17 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <button onClick={prev} className="btnleft">‹</button>  {/* Chevron gauche */}
-      <button onClick={next} className="btnright">›</button>  {/* Chevron droit */}
+      <button onClick={prev} className="btnleft">‹</button>
+      <button onClick={next} className="btnright">›</button>
       <img
         src={pictures[currentIndex]}
         alt={`Image ${currentIndex + 1}`}
       />
+      {pictures.length > 1 && (
+        <div className="carousel-counter">
+          {currentIndex + 1} / {pictures.length}
+        </div>
+      )}
     </div>
   );
 };
