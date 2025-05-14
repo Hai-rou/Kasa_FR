@@ -45,5 +45,19 @@
 
 /* Desktop : à partir de 1024px */
 @media (min-width: 1024px) {
-
+     .header{
+        padding-top: 2%;
+        img{
+            width: 15%;
+        }
+        .navbar{
+            width: 190px;
+            justify-content: space-between;
+            margin-right: 80px;
+        }
+        a{
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+    }
 }

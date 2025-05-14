@@ -134,5 +134,27 @@
 
 /* Desktop : à partir de 1024px */
 @media (min-width: 1024px) {
+  .content{
+    &.content--variantB {
+      margin-top: -5px;
+      .collapse_panel{
+        flex-direction: row;
+        .collapse__panel{
+          width: 50%;
+        }
+      }
+  }
+   &.content--variantA {
+    .collapse_panel{
+      width: 100%;
+      align-items: center;
+      .collapse__panel{
+        width: 90%;
+      }
+    }
+
+   }
+
+  }
 
 }

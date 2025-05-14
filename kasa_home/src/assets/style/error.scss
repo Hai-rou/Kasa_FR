@@ -2,6 +2,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1440px;
+    padding-left: 5%;
+    padding-right: 5%;
     gap: 50px;
     .error{
         display: flex;
@@ -53,5 +56,19 @@ main{
 
 /* Desktop : à partir de 1024px */
 @media (min-width: 1024px) {
+     main{
+        .error{
+            h1{
+                font-size: 190px;
+            }
+            p{
+                width: 100%;
+                font-size: 25px;
+            }
+        }
+        a{
+            font-size: 20px;
+        }
+    }
 
 }

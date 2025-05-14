@@ -104,5 +104,43 @@
 
 /* Desktop : à partir de 1024px */
 @media (min-width: 1024px) {
+    .loge_home{
+        .loge_content{
+            .loge_title{
+                margin-bottom: -7px;
+                font-size: 25px;
+            }
+            .loge_p{
+                font-size: 20px;
+            }
+            .item{
+                margin-top: 8px;
+                .tag-item{
+                    width: 10%;
+                    height: 40px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+        .rating{
+            flex-direction: column-reverse;
+            align-items: end;
+            margin-top: -130px;
+            gap: 20px;
+            .name{
+                width: 170px;
+                gap: 5px;
+                img{
+                    width: 50%;
+                }
+                .loge_name{
+                    margin-top: 20px;
+                    font-size: 20px;
+
+                }
+            }
+        }
+    }
 
 }

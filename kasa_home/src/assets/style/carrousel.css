@@ -46,4 +46,22 @@
 }
 
 /*** Tablette : à partir de 768px **/
-/* Desktop : à partir de 1024px *//*# sourceMappingURL=carrousel.css.map */
+@media (min-width: 768px) {
+  .carousel img {
+    height: 300px;
+  }
+}
+/* Desktop : à partir de 1024px */
+@media (min-width: 1024px) {
+  .carousel img {
+    height: 400px;
+  }
+  .carousel .btnleft,
+  .carousel .btnright {
+    font-size: 90px;
+  }
+  .carousel .carousel-counter {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=carrousel.css.map */

@@ -93,4 +93,39 @@
     font-size: 12px;
   }
 }
-/* Desktop : à partir de 1024px *//*# sourceMappingURL=logement.css.map */
+/* Desktop : à partir de 1024px */
+@media (min-width: 1024px) {
+  .loge_home .loge_content .loge_title {
+    margin-bottom: -7px;
+    font-size: 25px;
+  }
+  .loge_home .loge_content .loge_p {
+    font-size: 20px;
+  }
+  .loge_home .loge_content .item {
+    margin-top: 8px;
+  }
+  .loge_home .loge_content .item .tag-item {
+    width: 10%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .loge_home .rating {
+    flex-direction: column-reverse;
+    align-items: end;
+    margin-top: -130px;
+    gap: 20px;
+  }
+  .loge_home .rating .name {
+    width: 170px;
+    gap: 5px;
+  }
+  .loge_home .rating .name img {
+    width: 50%;
+  }
+  .loge_home .rating .name .loge_name {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=logement.css.map */

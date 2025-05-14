@@ -100,4 +100,22 @@
     width: 90%;
   }
 }
-/* Desktop : à partir de 1024px *//*# sourceMappingURL=collapse.css.map */
+/* Desktop : à partir de 1024px */
+@media (min-width: 1024px) {
+  .content.content--variantB {
+    margin-top: -5px;
+  }
+  .content.content--variantB .collapse_panel {
+    flex-direction: row;
+  }
+  .content.content--variantB .collapse_panel .collapse__panel {
+    width: 50%;
+  }
+  .content.content--variantA .collapse_panel {
+    width: 100%;
+    align-items: center;
+  }
+  .content.content--variantA .collapse_panel .collapse__panel {
+    width: 90%;
+  }
+}/*# sourceMappingURL=collapse.css.map */
