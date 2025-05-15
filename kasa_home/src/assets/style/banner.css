@@ -71,6 +71,12 @@
   .banner.banner--variantA .overlay {
     height: 150px;
   }
+  .banner.banner--variantB img {
+    height: 150px;
+  }
+  .banner.banner--variantB .overlay {
+    height: 150px;
+  }
   .banner.banner--variantB .ban_text {
     width: 100%;
     text-align: center;

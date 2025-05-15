@@ -1,8 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import logements from '../data/data.json';
-import Carousel from '../components/carrousel.jsx';
-import Rating from '../components/Rating';
+import Carousel from '../components/Carrousel.jsx';
+import Rating from '../components/Rating.jsx';
 import {Collapse} from '../components/Collapse.jsx';
 import '../assets/style/logement.css'
 

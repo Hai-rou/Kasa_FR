@@ -88,6 +88,12 @@
       }
     }
     &.banner--variantB {
+      img{
+        height: 150px;
+      }
+      .overlay{
+        height: 150px;
+      }
       .ban_text{
         width: 100%;
         text-align: center;

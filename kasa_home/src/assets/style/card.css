@@ -67,7 +67,8 @@
     background-color: #f5f5f5;
   }
   .home .data_gallery a .card .card_subtitle {
-    width: 25%;
-    font-size: 18px;
+    margin-top: -76px;
+    width: 15%;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=card.css.map */
