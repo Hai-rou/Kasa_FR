@@ -1,5 +1,5 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';  //* Hook de React Router **/
+import { useEffect } from 'react';                          //* Pour exécuter du code après le rendu **/
 import logements from '../data/data.json';
 import Carousel from '../components/Carrousel.jsx';
 import Rating from '../components/Rating.jsx';
@@ -7,8 +7,13 @@ import {Collapse} from '../components/Collapse.jsx';
 import '../assets/style/logement.css'
 
 const Logement = () => {
-  const { id } = useParams();
+
+  // Il te permet de récupérer les paramètres dynamiques de l’URL **/
+  const { id } = useParams();   // // récupère l'ID de l'URL **/
+
+  // Permet de naviguer vers une autre page **/
   const navigate = useNavigate();
+
   const logement = logements.find((item) => item.id === id);
 
   // Redirection vers /error si aucun logement trouvé

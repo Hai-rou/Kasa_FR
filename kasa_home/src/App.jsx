@@ -12,7 +12,7 @@ import { Routes, Route } from 'react-router-dom';
 const App = () => {
 
   return (  
-    <BrowserRouter>
+    <BrowserRouter>        
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
